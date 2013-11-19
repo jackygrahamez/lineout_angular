@@ -1,0 +1,22 @@
+<% include header %>
+
+<section class="content">
+	<div id="wrapper">
+	    <h2 class="light no-margin"><%= user.name.first %> <%= user.name.last %></h2>
+	
+	    <section class="bordered">
+	        <div class="container-fluid">
+				<% include nav %>
+	        </div>
+	    </section>
+	</div>    			
+</section>
+
+
+<% include footer %>
+
+<script type="text/javascript">
+
+var notification_url = "/<%= user.username %>/user_notifications/"; 
+getNotifications(notification_url);
+</script>
