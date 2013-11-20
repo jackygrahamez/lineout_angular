@@ -4,7 +4,9 @@
  */
 
 exports.index = function(req, res){
-  res.render('index');
+  res.render('index', 
+			{ title: 'LineOut',
+			  pagename: 'home' });
 };
 
 exports.partials = function (req, res) {
