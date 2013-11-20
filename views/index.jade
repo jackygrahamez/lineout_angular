@@ -2,18 +2,19 @@ extends layout
 
 block body
   div(ng-controller='AppCtrl')
-    h2 Hello {{name}}
-    ul.menu
-      li
-        a(href='view1') view1
-      li
-        a(href='view2') view2
-
+    input(type="email",ng-model="user.email",required,placeholder="Email")
+    br
+    input(type="password",ng-model="user.password",required,placeholder="Password")
+    br
+    hr
+    p debug view
+    pre user={{user | json}}
+    button login    
+    br
+    a(href='register') 
+      button register
     div(ng-view)
 
-    div
-      | Angular seed app: v
-      span(app-version)
   include footer  
 
 
